@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-def generate_distribution_plots(csv_filename="protocol_benchmarks.csv", output_img="distribution_boxplot.png"):
+def generate_distribution_plots(csv_filename="protocol_benchmarks.csv", output_img="distributionboxplot.png"):
     try:
         df = pd.read_csv(csv_filename)
     except FileNotFoundError:
@@ -40,7 +40,7 @@ def generate_distribution_plots(csv_filename="protocol_benchmarks.csv", output_i
         
         ax.set_title(title, fontsize=14)
         ax.set_ylabel('Time (seconds)', fontsize=12)
-        ax.set_xlabel('Global Registry Size (K)', fontsize=12)
+        ax.set_xlabel('Ring Size (n)', fontsize=12)
 
     plt.tight_layout()
     plt.subplots_adjust(top=0.92)
